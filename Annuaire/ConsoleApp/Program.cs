@@ -21,6 +21,8 @@ namespace ConsoleApp
                 Console.WriteLine(document);
             }
 
+            Console.WriteLine("Hello from Mac !");
+
             Console.Read();
         }
     }

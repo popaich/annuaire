@@ -23,6 +23,7 @@ namespace ConsoleApp
 
 
             Console.WriteLine("new feature");
+            Console.WriteLine("new feature2");
 
             Console.Read();
         }

@@ -21,6 +21,9 @@ namespace ConsoleApp
                 Console.WriteLine(document);
             }
 
+
+            Console.WriteLine("new feature");
+
             Console.Read();
         }
     }

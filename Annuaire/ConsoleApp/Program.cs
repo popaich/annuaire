@@ -23,6 +23,8 @@ namespace ConsoleApp
 
             Console.WriteLine("Hello from Mac !");
 
+            Console.WriteLine("Hello from Windows !");
+
             Console.Read();
         }
     }

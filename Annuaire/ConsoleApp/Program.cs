@@ -1,4 +1,5 @@
-﻿using MongoDB.Bson;
+﻿using DataProvider;
+using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
 
@@ -6,11 +7,13 @@ namespace ConsoleApp
 {
     class Program
     {
+        private static MongoDbService mongoDbService;
+
         static void Main(string[] args)
         {
-            var client = new MongoClient("mongodb://localhost:27017");
-            var database = client.GetDatabase("sirene_app");
-            var collection = database.GetCollection<BsonDocument>("sirene");
+            mongoDbService = new MongoDbService("mongodb://localhost:27017", "sirene_app");
+
+            var collection = mongoDbService.Db.GetCollection<BsonDocument>("sirene");
 
             //equality filter
             var filter = Builders<BsonDocument>.Filter.Eq("depet", "42");
@@ -21,11 +24,9 @@ namespace ConsoleApp
                 Console.WriteLine(document);
             }
 
-
-            Console.WriteLine("new feature");
-            Console.WriteLine("new feature2");
-
             Console.Read();
         }
+
+
     }
 }

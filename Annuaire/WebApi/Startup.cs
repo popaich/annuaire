@@ -36,10 +36,10 @@ namespace WebApi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute("default", "{controller=Etablissement}/{action=Index}/{id?}");
-            });
+            //app.UseMvc(routes =>
+            //{
+            //    routes.MapRoute("default", "{controller=Etablissement}/{action=Index}/{id?}");
+            //});
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace WebApi.Controllers
 {
+
     public class EtablissementController : Controller
     {
         private readonly MongoDbService data;
@@ -14,9 +15,9 @@ namespace WebApi.Controllers
             this.data = data;
         }
 
-        public IEnumerable<Etablissement> GetEtablissementsCommune(string depet)
+        public IEnumerable<Etablissement> GetEtablissementsCommune(string depet, string comet)
         {
-            return data.GetEtablissementsCommune(depet);
+            return data.GetEtablissementsCommune(depet, comet);
         }
     }
 }
